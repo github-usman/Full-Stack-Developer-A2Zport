@@ -1,3 +1,5 @@
+// input output require fun
+
 const readline = require('readline');
 
 const rl = readline.createInterface({
@@ -5,6 +7,8 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+
+// count the word which have maximum english letter
 function logestWord(sentence) {
   const words = sentence.split(' ');
 
@@ -28,6 +32,7 @@ function logestWord(sentence) {
   return longestWord;
 }
 
+// compare maximum Vowel if two or more than words have same length of letters
 function countVowelEachWord(word) {
   const vowels = 'aeiouAEIOU';
   let count = 0;
@@ -40,7 +45,7 @@ function countVowelEachWord(word) {
 
   return count;
 }
-
+// input and output funtion 
 rl.question('Enter a sentence =====> ', (input) => {
   const result = logestWord(input);
   console.log('Ans is ======>', result);
